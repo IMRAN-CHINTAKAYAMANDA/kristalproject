@@ -97,6 +97,8 @@ Health check:
 https://kristalproject-api.onrender.com/api/health
 ```
 
+The included Render blueprint uses the free plan, so SQLite data is stored on Render's ephemeral filesystem and can reset when the service restarts. For persistent production data, upgrade the Render service and attach a disk, then set `DB_PATH=/var/data/assets.sqlite`.
+
 ### Frontend on Vercel
 
 1. Go to Vercel.
